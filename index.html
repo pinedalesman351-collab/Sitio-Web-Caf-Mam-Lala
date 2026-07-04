@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Mamá Lala</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f1ea;
+            color: #3b2f2f;
+        }
+
+        header {
+            background-color: #6f4e37;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .btn {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .services {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6f4e37;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo.jpeg" alt="Logo Café Mamá Lala" width="50">
+        Café Mamá Lala 
+    </div>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>El mejor café artesanal</h1>
+    <p>Calidad en cada proceso: del grano a tu taza</p>
+    <a href="conocenos.html" class="btn">Conócenos</a>
+   
+</section>
+
+<section class="services">
+    <h2>Nuestros Servicios</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Trillado</h3>
+            <p>Separamos la cáscara del grano de café.</p>
+        </div>
+
+        <div class="card">
+            <h3>Tostado</h3>
+            <p>Realzamos el aroma y sabor del café.</p>
+        </div>
+
+        <div class="card">
+            <h3>Molido</h3>
+            <p>Molido perfecto para cada tipo de preparación.</p>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align:center; padding:15px; background:#6f4e37; color:white;">
+    © 2026 Café Mamá Lala - Todos los derechos reservados<br>
+    sitio web realizado por: Greisy Nohelia Catellanos • Yesli Loani Vasquez • Dulce María Leiva<br>
+    12vo de informatica 
+    
+</footer>
+
+</body>
+</html>

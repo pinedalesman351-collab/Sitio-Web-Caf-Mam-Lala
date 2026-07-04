@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto - Café Mamá Lala</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f5f1ea;
+    color: #3b2f2f;
+}
+
+/* HEADER */
+header {
+    background-color: #6f4e37;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* NAV */
+nav {
+    background-color: #4b3324;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #6f4e37;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #6f4e37;
+}
+
+/* CONTENIDO */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO WHATSAPP */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #6f4e37;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4b3324;
+}
+
+.social a {
+    color: #6f4e37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #6f4e37;
+    color: white;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="img/logo.jpeg" alt="Logo Café Mamá Lala">
+    <h1>Contacto - Café Mamá Lala ☕</h1>
+</header>
+
+<!-- MENÚ -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="conocenos.html">Conócenos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+    <div class="info-box">
+        <h2>Información de contacto</h2>
+        <p>📍 Ubicación: Las Crucitas S.B, Santa Bárbara, Honduras.</p>
+        <p>📞 Teléfono: +504 9657-7131</p>
+        <p>✉ Correo: laradulce964@gmail.com</p>
+    </div>
+
+ <div class="info-box">
+    <h2>Ubicación</h2>
+
+    <p>Haz clic para ver nuestra ubicación en Google Maps</p>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Las+Crucitas+Santa+B%C3%A1rbara+Honduras" 
+       target="_blank"
+       style="display:inline-block;
+       background:#6f4e37;
+       color:white;
+       padding:10px 15px;
+       border-radius:5px;
+       text-decoration:none;">
+       Ver ubicación en Google Maps
+    </a>
+</div>
+
+    <div class="info-box social">
+        <h2>Redes Sociales</h2>
+        <a href="https://www.facebook.com/share/1Cb69uL1d5/?mibextid=wwXIfr">Facebook</a>
+    </div>
+
+    <!-- FORMULARIO WHATSAPP YA FUNCIONANDO -->
+    <div class="info-box">
+
+        <h2>Envíanos tu consulta</h2>
+
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+
+        <button onclick="enviarWhatsApp()">Enviar mensaje</button>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Café Mamá Lala - Todos los derechos reservados<br>
+    sitio web realizado por: Greisy Nohelia Castellanos • Yesli Loani Vásquez • Dulce María Leiva<br>
+    12vo de informática
+</footer>
+
+<!-- JAVASCRIPT WHATSAPP -->
+<script>
+function enviarWhatsApp() {
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
+    let mensaje = document.getElementById("mensaje").value;
+
+    let texto = "Hola, soy " + nombre +
+                ". Mi correo es " + correo +
+                ". Mensaje: " + mensaje;
+
+    let telefono = "50496577131"; // número de la empresa
+
+    let url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
